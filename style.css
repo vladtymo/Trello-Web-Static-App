@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: teal;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
+    display: grid;
+    grid-template-rows: 65px auto;
+}
+
+header {
+    background-color: rgb(0, 102, 102);
+    /* position: sticky; */
+    /* left: 0; */
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: white;
+}
+
+.board {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+}
+
+.board::after {
+    content: "";
+    padding-right: 0.02px;
+    /* smallest size that is cross browser */
+}
+
+.list {
+    flex-shrink: 0;
+    display: grid;
+    align-content: start;
+    width: 350px;
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.task-list {
+    overflow-y: scroll;
+}
+
+.task {
+    background-color: #fff;
+    padding: 12px;
+    padding-bottom: 6px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    box-shadow: 0 1px #888;
+}
+
+.task .bar {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bar .item {
+    margin-right: 15px;
+}
+
+.bar .item img {
+    height: 1em;
+    margin-right: 2px;
+}
+
+.bar .avatar {
+    margin-left: auto;
+}
+
+.bar .avatar img {
+    height: 2em;
+}
